@@ -23,7 +23,10 @@ def main():
         if not file.endswith('_table.csv'):
             continue
 
-        new_column_name = file.split('_')[0]
+        if file.startswith('raw_'):
+            continue
+
+        new_column_name = file.split('_')[2]
         df = pd.read_csv(tables_path / file)
 
         accessions_to_merge = df[["tax_id", "accession"]].rename(

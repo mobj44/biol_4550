@@ -1,4 +1,4 @@
-required_packages <- c("ape", "phangorn", "phytools", "ggtree", "ggplot2")
+required_packages <- c("ape", "phangorn", "phytools", "ggtree", "ggplot2", "tidyverse", "janitor")
 
 to_install <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
 to_install

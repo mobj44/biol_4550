@@ -1,10 +1,15 @@
 {
-  "genera_ids": ["337687"],
+  "genera_ids": ["337687", "30640"],
   "genes": [
     {
       "name": "CYTB",
       "term": "(CYTB[Gene] 400:1500[SLEN]",
       "file_prefix": "rodents_cytb_with_len_minmax"
+    },
+    {
+      "name": "COI",
+      "term": "(COI[Gene] 400:1500[SLEN]",
+      "file_prefix": "rodents_coi_with_len_minmax"
     }
   ]
 }
