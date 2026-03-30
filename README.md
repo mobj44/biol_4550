@@ -49,13 +49,13 @@ To run the `get_tables.py` script from the project root.
 python3 scripts/get_tables.py
 ```
 
-<img src="../images/program_running.png" alt="Alt Text" style="width:60%; height:auto;">
+<img src="./images/program_running.png" alt="Alt Text" style="width:60%; height:auto;">
 
 ### JSON Configuration
 
 This script automatically looks for a `JSON` file in the same folder as the script named `config.json` at the root. If you want to pass in a differnt file it is the first argument given after the file name or you can specify using the `-f` or `--file` flag
 
-<img src="../images/help_menu.png" alt="Alt Text" style="width:60%; height:auto;">
+<img src="./images/help_menu.png" alt="Alt Text" style="width:60%; height:auto;">
 
 This program creates a folder called data in the project root if it doesn't already exist, and a `csv` file for every gene listed in the json. The `csv` contains txid, scientific name, accession number, sequence name, and sequence length.
 
