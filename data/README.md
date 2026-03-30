@@ -6,4 +6,4 @@
 | **`alignments/`**         | Multiple sequence alignments (MSAs) generated from the raw FASTA files using MAFFT. Each file represents an aligned gene dataset.                                     |
 | **`trimmed_alignments/`** | Cleaned and trimmed versions of the MAFFT alignments. Gaps and poorly aligned regions were filtered out using R scripts.                                              |
 | **`supermatrix/`**        | Contains the concatenated supermatrix alignment and partition files built from the trimmed alignments. Input for both maximum likelihood and Bayesian tree inference. |
-| **`tables/`**             | CSV tables summarizing metadata for each gene and taxon (e.g., sequence length, accession, and taxonomy), generated during the data retrieval step.                   |
+| **`tables/`**             | CSV tables summarizing metadata for each gene and taxon (e.g., sequence length, accession, and taxonomy), generated during the data retrieval step, in both raw and cleaned format. As well as a master accessions file for downloading fasta files.                  |

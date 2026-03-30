@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 import os
 from tqdm import tqdm
+import argparse
 
 
 def get_one_fasta(accession, scientific_name):
@@ -31,12 +32,12 @@ def get_one_fasta(accession, scientific_name):
     return f'>{scientific_name}\n{fasta}'
 
 
-def get_fastas(acc_column, names_col, gene):
+def get_fastas(acc_column, names_col):
+
     fasta_list = []
     for acc, sci_name in tqdm(
             zip(acc_column, names_col),
-            total=len(acc_column),
-            desc=gene):
+            total=len(acc_column)):
         if pd.isna(acc) or acc == '':
             continue
         fasta = get_one_fasta(acc, sci_name)
@@ -63,8 +64,26 @@ def main():
     ez.email = os.getenv("ncbi_email")
     ez.api_key = os.getenv("ncbi_key")
 
+    # Arg Parse
+    parser = argparse.ArgumentParser(
+        prog="GetFastas"
+    )
+
+    parser.add_argument('-f', '--filename')
+    parser.add_argument('-o', '--output')
+
+    args = parser.parse_args()
+
+    if args.filename == None:
+        print('No filename provided. See -h for more details')
+        return
+
+    if args.output == None:
+        print('No output provided. See -h for more details')
+        return
+
     fasta_path = create_data_path(wd, "raw_data")
-    acc_file = wd / 'data' / 'tables' / 'master_accessions.csv'
+    acc_file = wd / args.filename
 
     if not os.path.exists(acc_file):
         print('ERROR: Accessions file not found.')
@@ -72,9 +91,8 @@ def main():
 
     df = pd.read_csv(acc_file)
 
-    for gene in df.columns[2:]:
-        fastas = get_fastas(df[gene], df['scientific_name'], gene)
-        create_fasta(fasta_path / f'{gene}_seqs.fasta', fastas)
+    fastas = get_fastas(df['accession'], df['scientific_name'])
+    create_fasta(fasta_path / f'{args.output}.fasta', fastas)
 
 
 if __name__ == "__main__":

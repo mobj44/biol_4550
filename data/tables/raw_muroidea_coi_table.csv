@@ -347,3 +347,39 @@ tax_id,scientific_name,accession,seq_name,seq_len
 1003884,Oryzomys sp. ABECB083-08,JF491731.1,"Oryzomys sp. ABECB083-08 voucher ROM 118745 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",403
 2172890,Tachyoryctes splendens complex sp. 4 JK-2018,MH189125.1,"Tachyoryctes splendens complex sp. 4 JK-2018 isolate LAV2386 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",684
 1267394,Allocricetulus curtatus,KJ466761.1,"Allocricetulus curtatus voucher NMCDC:1360 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",657
+101670,Napaeozapus,JF456968.1,"Napaeozapus insignis voucher HLC-16318 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",658
+101671,Napaeozapus insignis,JF456968.1,"Napaeozapus insignis voucher HLC-16318 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",658
+101672,Eozapus,JX962294.1,"Eozapus setchuanus isolate QH653_2011 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",653
+1041407,Pygeretmus,KF153016.1,"Pygeretmus pumilio voucher JW04 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",645
+1041412,Stylodipus,MN980384.1,"Stylodipus telum isolate XJ18156 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
+1041413,Stylodipus telum,MN980384.1,"Stylodipus telum isolate XJ18156 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
+1041415,Salpingotus kozlovi,KF153028.1,"Salpingotus kozlovi voucher JW316 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",645
+1041416,Orientallactaga bullata,MN980096.1,"Orientallactaga bullata isolate NM10047 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
+1078408,Stylodipus andrewsi,MN980383.1,"Stylodipus andrewsi isolate NM10012 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
+1147103,Dipodidae sp. ETBM022-11,JQ350477.1,"UNVERIFIED: Dipodidae sp. ETBM022-11 cytochrome oxidase subunit 1-like (COI) gene, partial sequence; mitochondrial",661
+1652691,Orientallactaga balikunica,MN980095.1,"Orientallactaga balikunica isolate XJ08107 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
+1738044,Scarturus tetradactyla,MH449581.1,"Scarturus tetradactyla isolate A-22-mk12 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+233182,Allactaga major,MH449584.1,"Allactaga major isolate A-25-mk70 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+2494513,Scarturus,MN980097.1,"Scarturus elater isolate XJ18107 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
+2545425,Allactaga sp. A-20-mk1,MH449579.1,"Allactaga sp. A-20-mk1 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+2643764,unclassified Allactaga,MH449579.1,"Allactaga sp. A-20-mk1 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+2926631,Scarturus hotsoni,MH449578.1,"Scarturus hotsoni isolate A-19-MVZ192079 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+2926633,Scarturus toussi,KX219871.1,"Scarturus toussi voucher ZMFUM2745 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",619
+35738,Eremodipus,MK085764.1,"Eremodipus lichtensteini isolate ZIN73933 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+35739,Eremodipus lichtensteini,MK085764.1,"Eremodipus lichtensteini isolate ZIN73933 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+48867,Jaculus,MH449586.1,"Jaculus orientalis isolate A-27-mk16 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+48868,Jaculus orientalis,MH449586.1,"Jaculus orientalis isolate A-27-mk16 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+489448,Sicista betulina,KY754549.1,"Sicista betulina voucher NMW 65926 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",697
+51337,Jaculus jaculus,MH449585.1,"Jaculus jaculus isolate A-26-mk8 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+52905,Sicistinae,KY754549.1,"Sicista betulina voucher NMW 65926 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",697
+52906,Sicista,KY754549.1,"Sicista betulina voucher NMW 65926 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",697
+73860,Allactaga,MH449584.1,"Allactaga major isolate A-25-mk70 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+73861,Scarturus elater,MN980097.1,"Scarturus elater isolate XJ18107 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
+73862,Dipus,KX399597.1,"Dipus sagitta isolate HCo115 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",639
+73863,Dipus sagitta,KX399597.1,"Dipus sagitta isolate HCo115 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",639
+980883,Euchoreutinae,KF153025.1,"Euchoreutes naso voucher A4 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",645
+980893,Euchoreutes,KF153025.1,"Euchoreutes naso voucher A4 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",645
+980894,Euchoreutes naso,KF153025.1,"Euchoreutes naso voucher A4 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",645
+98659,Zapodinae,JF457199.1,"Zapus princeps voucher HLC-16343 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",657
+98660,Zapus,JF457199.1,"Zapus princeps voucher HLC-16343 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",657
+98661,Zapus trinotatus,JF457201.1,"Zapus trinotatus voucher ROM:F40942 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",645

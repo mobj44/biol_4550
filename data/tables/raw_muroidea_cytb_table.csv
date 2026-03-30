@@ -1279,3 +1279,21 @@ tax_id,scientific_name,accession,seq_name,seq_len
 1472360,Peromyscus sp. YES-2014,KF964333.1,"UNVERIFIED: Peromyscus sp. YES-2014 cytochrome b-like (cytb) gene, partial sequence; mitochondrial",1142
 2592601,Arvicanthis rufinus,OR167416.1,"Arvicanthis rufinus isolate 36 cytochrome b (cytb) gene, partial cds; mitochondrial",402
 1267394,Allocricetulus curtatus,KY993923.1,"Allocricetulus curtatus isolate f.c. Ac cytochrome b (Cytb) gene, partial cds; mitochondrial",1140
+3397089,Eozapus setchuanus vicinus,PQ723119.1,"Eozapus setchuanus vicinus isolate csd3581 cytochrome b (cytb) gene, partial cds; mitochondrial",1056
+3398079,unclassified Eozapus,PQ752965.1,"Eozapus sp. w YS-2025 isolate csd2808 cytochrome b (cytb) gene, partial cds; mitochondrial",1106
+3409896,unclassified Sicista,PV175516.1,"Sicista sp. b ZZ-2025 isolate KIZ 042969 cytochrome b (cytb) gene, partial cds; mitochondrial",1137
+3409897,Sicista sp.,PV175512.1,"Sicista sp. isolate XTS2021139 cytochrome b (cytb) gene, partial cds; mitochondrial",1102
+3409898,unclassified Sicistinae,PV175500.1,"Sicistinae gen. n. sp. s ZZ-2025 isolate KIZ 042966 cytochrome b (cytb) gene, complete cds; mitochondrial",1140
+3409899,Sicistinae gen. n. sp. s ZZ-2025,PV175500.1,"Sicistinae gen. n. sp. s ZZ-2025 isolate KIZ 042966 cytochrome b (cytb) gene, complete cds; mitochondrial",1140
+3409900,Sicista sp. b ZZ-2025,PV175516.1,"Sicista sp. b ZZ-2025 isolate KIZ 042969 cytochrome b (cytb) gene, partial cds; mitochondrial",1137
+3438690,Sicista sp. w YD-2025,PV769207.1,"Sicista sp. w YD-2025 isolate CSD3590_CYTB cytochrome b (cytb) gene, partial cds; mitochondrial",1122
+3438691,Sicista sp. 1 YD-2025,PV769199.1,"Sicista sp. 1 YD-2025 isolate CSD3574_CYTB cytochrome b (cytb) gene, partial cds; mitochondrial",1122
+35738,Eremodipus,KM397200.1,"Eremodipus lichtensteini voucher t.c.Eli cytochrome b (cytb) gene, partial cds; mitochondrial",1116
+48868,Jaculus orientalis,KT862832.1,"Jaculus orientalis voucher H14 cytochrome b (cytb) gene, partial cds; mitochondrial",1122
+51337,Jaculus jaculus,OL898649.1,"Jaculus jaculus voucher Jac 28 cytochrome b (cytb) gene, partial cds; mitochondrial",852
+73860,Allactaga,OL495098.1,"Allactaga severtzovi isolate Asev_2006 cytochrome b (cytb) gene, complete cds; mitochondrial",1140
+73861,Scarturus elater,PQ064103.1,"Scarturus elater isolate Selatcy4 cytochrome b (cytb) gene, partial cds; mitochondrial",921
+73862,Dipus,PQ450159.1,"Dipus sagitta cytochrome b (cytb) gene, partial cds; mitochondrial",931
+980893,Euchoreutes,HQ585977.1,"Euchoreutes naso isolate xj7 cytochrome b (cytb) gene, partial cds; mitochondrial",1110
+980894,Euchoreutes naso,HQ585977.1,"Euchoreutes naso isolate xj7 cytochrome b (cytb) gene, partial cds; mitochondrial",1110
+98659,Zapodinae,PQ752965.1,"Eozapus sp. w YS-2025 isolate csd2808 cytochrome b (cytb) gene, partial cds; mitochondrial",1106

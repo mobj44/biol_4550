@@ -27,6 +27,7 @@ tax_id,scientific_name,accession,seq_name,seq_len
 723804,Dipodillus dasyurus,MN326086.1,"Dipodillus dasyurus voucher USNM:MAMM:602587 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",643
 1267393,Eolagurus przewalskii,KC017827.1,"Eolagurus przewalskii voucher NMCDC 027 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",657
 870527,Eothenomys eva,KF999139.1,"Eothenomys eva voucher f287 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",648
+980894,Euchoreutes naso,KF153025.1,"Euchoreutes naso voucher A4 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",645
 864465,Euneomys mordax,HQ860421.1,"Euneomys mordax voucher CMI AN97 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",594
 2766943,Euryoryzomys legatus,MT118082.1,"Euryoryzomys legatus voucher MACN-Ma26339 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",667
 530171,Handleyomys alfaroi,MZ364405.1,"Handleyomys alfaroi voucher IAvH-CT-35612 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",658
@@ -37,6 +38,8 @@ tax_id,scientific_name,accession,seq_name,seq_len
 530176,Hylaeamys yunganus,PV403561.1,"Hylaeamys yunganus voucher FPI0000483 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",657
 1159790,Hylomyscus grandis,JQ667645.1,"Hylomyscus grandis voucher IFORA SPOT10112 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",711
 913014,Hylomyscus pamfi,JQ667663.1,"Hylomyscus pamfi voucher VN ospmh102 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",718
+51337,Jaculus jaculus,MH449585.1,"Jaculus jaculus isolate A-26-mk8 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
+48868,Jaculus orientalis,MH449586.1,"Jaculus orientalis isolate A-27-mk16 cytochrome c oxidase subunit I (COI) gene, partial cds; mitochondrial",615
 1268271,Leopoldamys milleti,JX173175.1,"Leopoldamys milleti isolate 12-010 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",641
 857467,Leopoldamys neilli,HM219588.1,"Leopoldamys neilli haplotype HCOI16 cytochrome c oxidase subunit 1 (COI) gene, partial cds; mitochondrial",713
 1305941,Leopoldamys revertens,JX173179.1,"Leopoldamys sabanus revertens isolate BaD-14 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",641
@@ -108,6 +111,7 @@ tax_id,scientific_name,accession,seq_name,seq_len
 996586,Rhabdomys dilectus,OQ322591.1,"Rhabdomys dilectus dilectus voucher Moz2 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",795
 1543365,Rhabdomys dilectus dilectus,OQ322591.1,"Rhabdomys dilectus dilectus voucher Moz2 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",795
 2023160,Rhipidomys albujai,MF806208.1,"Rhipidomys albujai isolate PS75 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",657
+73861,Scarturus elater,MN980097.1,"Scarturus elater isolate XJ18107 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",672
 530180,Sooretamys angouya,KJ013091.1,"Sooretamys angouya voucher 379-PEM44 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",685
 2170709,Tachyoryctes macrocephalus,MH189082.1,"Tachyoryctes macrocephalus isolate ETH0156 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial",606
 1545497,Thomasomys paramorum,MF806366.1,"Thomasomys paramorum isolate TEL2368 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial",657

@@ -1,15 +1,15 @@
 {
-  "genera_ids": ["337687", "30640"],
+  "genera_ids": ["337687", "1963761"],
   "genes": [
     {
       "name": "CYTB",
-      "term": "(CYTB[Gene] 400:1500[SLEN]",
-      "file_prefix": "rodents_cytb_with_len_minmax"
+      "term": "CYTB[Gene] 400:1500[SLEN]",
+      "file_prefix": "raw_muroidea_cytb_table"
     },
     {
       "name": "COI",
-      "term": "(COI[Gene] 400:1500[SLEN]",
-      "file_prefix": "rodents_coi_with_len_minmax"
+      "term": "COI[Gene] 400:1500[SLEN]",
+      "file_prefix": "raw_muroidea_coi_table"
     }
   ]
 }

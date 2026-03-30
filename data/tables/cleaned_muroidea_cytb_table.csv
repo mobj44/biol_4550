@@ -27,6 +27,7 @@ tax_id,scientific_name,accession,seq_name,seq_len
 723804,Dipodillus dasyurus,OM324332.1,"Dipodillus dasyurus isolate COVROD3589 cytochrome b (cytb) gene, partial cds; mitochondrial",1125
 1267393,Eolagurus przewalskii,MK750944.1,"Eolagurus przewalskii voucher ZMMU:S-192279 cytochrome b (cytb) gene, partial cds; mitochondrial",1140
 870527,Eothenomys eva,KY997409.1,"Eothenomys eva isolate QH15024 cytochrome b (Cytb) gene, partial cds; mitochondrial",1134
+980894,Euchoreutes naso,HQ585977.1,"Euchoreutes naso isolate xj7 cytochrome b (cytb) gene, partial cds; mitochondrial",1110
 864465,Euneomys mordax,KY753985.1,"Euneomys mordax cytochrome b (cytb) gene, partial cds; mitochondrial",425
 2766943,Euryoryzomys legatus,MT118042.1,"Euryoryzomys legatus voucher MACN27069 cytochrome b (cytb) gene, partial cds; mitochondrial",800
 530171,Handleyomys alfaroi,OR988049.1,"Handleyomys alfaroi isolate JFD1588 cytochrome b (cytb) gene, partial cds; mitochondrial",1101
@@ -37,6 +38,8 @@ tax_id,scientific_name,accession,seq_name,seq_len
 530176,Hylaeamys yunganus,PV391868.1,"Hylaeamys yunganus voucher FPI0000481 cytochrome b (CYTB) gene, partial cds; mitochondrial",804
 1159790,Hylomyscus grandis,JQ735515.1,"Hylomyscus grandis voucher IFORA_SPOT10112 cytochrome b (CYTB) gene, partial cds; mitochondrial",676
 913014,Hylomyscus pamfi,MT311311.1,"Hylomyscus pamfi isolate VR110 cytochrome b (CYTb) gene, partial cds; mitochondrial",402
+51337,Jaculus jaculus,OL898649.1,"Jaculus jaculus voucher Jac 28 cytochrome b (cytb) gene, partial cds; mitochondrial",852
+48868,Jaculus orientalis,KT862832.1,"Jaculus orientalis voucher H14 cytochrome b (cytb) gene, partial cds; mitochondrial",1122
 1268271,Leopoldamys milleti,JX173159.1,"Leopoldamys milleti isolate 12-031 cytochrome b (Cytb) gene, partial cds; mitochondrial",1143
 857467,Leopoldamys neilli,HM219612.1,"Leopoldamys neilli haplotype HCB22 cytochrome b (cytb) gene, partial cds; mitochondrial",899
 1305941,Leopoldamys revertens,JX173163.1,"Leopoldamys sabanus revertens isolate BaD-14 cytochrome b (Cytb) gene, partial cds; mitochondrial",1143
@@ -108,6 +111,7 @@ tax_id,scientific_name,accession,seq_name,seq_len
 996586,Rhabdomys dilectus,OL408955.1,"Rhabdomys dilectus voucher KIZ:NMK KE20150120 cytochrome b (cytb) gene, partial cds; mitochondrial",1140
 1543365,Rhabdomys dilectus dilectus,OK093808.1,"Rhabdomys dilectus dilectus isolate TZ33882 cytochrome b (cytb) gene, partial cds; mitochondrial",1040
 2023160,Rhipidomys albujai,KY366345.1,"Rhipidomys albujai voucher QCAZ:15214 cytochrome b (cytb) gene, partial cds; mitochondrial",999
+73861,Scarturus elater,PQ064103.1,"Scarturus elater isolate Selatcy4 cytochrome b (cytb) gene, partial cds; mitochondrial",921
 530180,Sooretamys angouya,OQ560626.1,"Sooretamys angouya isolate BOCA841 cytochrome b (cytb) gene, partial cds; mitochondrial",719
 2170709,Tachyoryctes macrocephalus,MH189040.1,"Tachyoryctes macrocephalus isolate ETH0935 cytochrome b (cytb) gene, partial cds; mitochondrial",882
 1545497,Thomasomys paramorum,MN557098.1,"Thomasomys paramorum voucher QCAZ12624 cytochrome b (Cytb) gene, partial cds; mitochondrial",753

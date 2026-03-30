@@ -16,11 +16,10 @@ from tqdm import tqdm
 from utils import *
 
 
-# Keep the script conservative even when an API key is configured.
-# Without a key, NCBI's public guidance is much lower, so we stay polite.
 DEFAULT_REQUEST_DELAY_SECONDS = 0.12
 DEFAULT_RETRIES = 6
 DEFAULT_BACKOFF_BASE_SECONDS = 1.0
+DEBUG_MISS_EXAMPLES = 10
 
 
 @dataclass
@@ -38,48 +37,70 @@ class TaxInfo:
     seq_name: str | None = None
     seq_len: int | None = None
 
-    def get_sci_name(self):
-        """Set the scientific name for this taxon."""
-        tax_sum = entrez_retry(
+    def get_sci_name(self) -> bool:
+        records = entrez_retry(
             lambda: ez.read(
                 ez.esummary(
                     db="taxonomy",
                     id=self.tax_id,
                 )
-            )[0]
+            )
         )
-        self.scientific_name = tax_sum["ScientificName"]
 
-    def nuc_processing(self, gene: str):
-        """Set accession, sequence title, and sequence length for this taxon."""
+        if not records:
+            self.scientific_name = None
+            return False
+
+        self.scientific_name = records[0].get("ScientificName")
+        return self.scientific_name is not None
+
+    def nuc_processing(self, gene: str, debug: bool = False) -> bool:
+        query = f"txid{self.tax_id}[ORGN] AND {gene}"
+
         nuc_search = entrez_retry(
             lambda: ez.read(
                 ez.esearch(
                     db="nuccore",
-                    term=f"txid{self.tax_id}[ORGN] AND {gene}",
+                    term=query,
                     retmax=1,
                 )
             )
         )
 
-        nuc_id = nuc_search["IdList"][0] if nuc_search["IdList"] else None
-        if nuc_id is None:
-            return
+        id_list = nuc_search.get("IdList", [])
+        count = nuc_search.get("Count", "0")
 
-        nuc_sum = entrez_retry(
+        if not id_list:
+            return False
+
+        nuc_id = id_list[0]
+
+        records = entrez_retry(
             lambda: ez.read(
                 ez.esummary(
                     db="nuccore",
                     id=nuc_id,
                 )
-            )[0]
+            )
         )
 
+        if not records:
+            return False
+
+        nuc_sum = records[0]
         self.accession = nuc_sum.get("AccessionVersion")
         self.seq_name = nuc_sum.get("Title")
 
         length = nuc_sum.get("Length")
         self.seq_len = int(length) if length is not None else None
+
+        if debug:
+            print(
+                f"[HIT] tax_id={self.tax_id} accession={self.accession} "
+                f"title={self.seq_name}"
+            )
+
+        return self.accession is not None
 
 
 TRANSIENT_ERROR_SUBSTRINGS = (
@@ -98,7 +119,6 @@ TRANSIENT_ERROR_SUBSTRINGS = (
     "429",
     "incomplete read",
 )
-
 
 TRANSIENT_EXCEPTIONS = (
     RuntimeError,
@@ -128,7 +148,11 @@ def _is_transient_error(exc: Exception) -> bool:
     return any(fragment in msg for fragment in TRANSIENT_ERROR_SUBSTRINGS)
 
 
-def entrez_retry(request_func, retries: int = DEFAULT_RETRIES, base_delay: float = DEFAULT_BACKOFF_BASE_SECONDS):
+def entrez_retry(
+    request_func,
+    retries: int = DEFAULT_RETRIES,
+    base_delay: float = DEFAULT_BACKOFF_BASE_SECONDS,
+):
     """
     Retry wrapper for Entrez calls.
 
@@ -171,16 +195,17 @@ def get_tax_ids(ids: set[str]) -> set[str]:
                 )
             )
         )
-        tax_ids.update(resp["IdList"])
+        tax_ids.update(resp.get("IdList", []))
         polite_pause()
 
     tax_ids -= ids
     return tax_ids
 
 
-def create_csv(csv_name: Path, data: list[TaxInfo]):
+def create_csv(csv_name: Path, data: list[TaxInfo]) -> int:
     """Create a CSV file for a gene using the data stored in TaxInfo objects."""
     headers = ["tax_id", "scientific_name", "accession", "seq_name", "seq_len"]
+    rows_written = 0
 
     with open(csv_name, "w", newline="") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
@@ -199,6 +224,9 @@ def create_csv(csv_name: Path, data: list[TaxInfo]):
                     "seq_len": row.seq_len,
                 }
             )
+            rows_written += 1
+
+    return rows_written
 
 
 def main():
@@ -241,29 +269,78 @@ def main():
         name, term, prefix = gene.values()
         genes.append(Gene(name, term, prefix))
 
-    txids: list[str] = list(get_tax_ids(genera_ids))
+    txids: list[str] = sorted(get_tax_ids(genera_ids))
+
+    if not txids:
+        print("ERROR: No taxonomy IDs were found from genera_ids.")
+        return
+
+    print(f"Found {len(txids)} taxonomy IDs to query.\n")
 
     for gene_config in genes:
         tax_data: list[TaxInfo] = []
         csv_name: Path = tables_path / f"{gene_config.file_prefix}_table.csv"
 
+        hits = 0
+        misses = 0
+        failed = 0
+        missing_name = 0
+        miss_examples_shown = 0
+
         with tqdm(total=len(txids), desc=gene_config.name) as progress:
-            for tax_id in txids:
+            for idx, tax_id in enumerate(txids):
                 try:
                     tax = TaxInfo(tax_id)
-                    tax.get_sci_name()
+
+                    got_name = tax.get_sci_name()
                     polite_pause()
 
-                    tax.nuc_processing(gene_config.term)
+                    if not got_name:
+                        missing_name += 1
+
+                    debug_this_one = miss_examples_shown < DEBUG_MISS_EXAMPLES
+                    got_hit = tax.nuc_processing(
+                        gene_config.term, debug=debug_this_one)
                     polite_pause()
+
+                    if got_hit:
+                        hits += 1
+                    else:
+                        misses += 1
+                        if miss_examples_shown < DEBUG_MISS_EXAMPLES:
+                            print(
+                                f"[MISS] tax_id {tax.tax_id} "
+                                f"({tax.scientific_name}) had no hit for {gene_config.name}"
+                            )
+                            miss_examples_shown += 1
 
                     tax_data.append(tax)
+
                 except Exception as exc:
+                    failed += 1
                     print(f"[WARN] tax_id {tax_id} failed: {exc}")
+
                 finally:
                     progress.update(1)
 
-        create_csv(csv_name, tax_data)
+        rows_written = create_csv(csv_name, tax_data)
+
+        hit_pct = (hits / len(txids) * 100) if txids else 0
+        miss_pct = (misses / len(txids) * 100) if txids else 0
+        fail_pct = (failed / len(txids) * 100) if txids else 0
+
+        print("\n" + "=" * 60)
+        print(f"{gene_config.name} summary")
+        print("=" * 60)
+        print(f"Total taxa checked:      {len(txids)}")
+        print(f"Hits with accession:     {hits} ({hit_pct:.1f}%)")
+        print(f"Misses (no sequence):    {misses} ({miss_pct:.1f}%)")
+        print(f"Missing tax name:        {missing_name}")
+        print(f"Hard failures:           {failed} ({fail_pct:.1f}%)")
+        print(f"Tax objects collected:   {len(tax_data)}")
+        print(f"Rows written to CSV:     {rows_written}")
+        print(f"CSV written to:          {csv_name}")
+        print("=" * 60 + "\n")
 
 
 if __name__ == "__main__":
